@@ -11,15 +11,15 @@ let req;
 // Routes
 app.get('/', (request: Request, res: Response) => {
   console.log('Hello World');
-  console.log(request);
+  console.log(req);
  
   res.json({ message: 'Welcome to Node.js TypeScript Demo API', data: request });
 });
 
 app.post('/', (request: Request, res: Response) => {
   console.log('Hello World');
-  console.log(request);
-  req = request;
+  console.log(request.body);
+  req = request.body;
   res.json({ message: 'Welcome to Node.js TypeScript Demo API' });
 });
 
