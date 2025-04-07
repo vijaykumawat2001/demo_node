@@ -7,7 +7,7 @@ const port: number = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-let req;
+let req:any;
 // Routes
 app.get('/', (request: Request, res: Response) => {
   console.log('Hello World');
