@@ -7,10 +7,19 @@ const port: number = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+let req;
 // Routes
-app.get('/', (req: Request, res: Response) => {
+app.get('/', (request: Request, res: Response) => {
   console.log('Hello World');
-  console.log(req);
+  console.log(request);
+ 
+  res.json({ message: 'Welcome to Node.js TypeScript Demo API', data: request });
+});
+
+app.post('/', (request: Request, res: Response) => {
+  console.log('Hello World');
+  console.log(request);
+  req = request;
   res.json({ message: 'Welcome to Node.js TypeScript Demo API' });
 });
 
