@@ -11,9 +11,9 @@ let req:any;
 // Routes
 app.get('/', (request: Request, res: Response) => {
   console.log('Hello World');
-  console.log(req);
  
-  res.json({ message: 'Welcome to Node.js TypeScript Demo API', data: request });
+ 
+  res.json({ message: 'Welcome to Node.js TypeScript Demo API' });
 });
 
 app.post('/', (request: Request, res: Response) => {
